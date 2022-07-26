@@ -1,5 +1,7 @@
 package anySort;
 
+
+//O(n log n) in average and worst case
 public class HeapsortAlgorithm {
 	public static void heapsort(int[]data) {
 		int size = data.length;

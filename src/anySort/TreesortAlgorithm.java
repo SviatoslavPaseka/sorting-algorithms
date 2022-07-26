@@ -3,6 +3,7 @@ package anySort;
 import java.util.ArrayList;
 import java.util.List;
 
+//in best case - O(n), average and worst - O(n log n)
 public class TreesortAlgorithm {
 	//resultset
 	private List<Integer> sortedData = new ArrayList<>();

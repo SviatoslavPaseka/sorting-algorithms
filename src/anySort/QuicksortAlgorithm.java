@@ -1,5 +1,7 @@
 package anySort;
 
+
+//in general - O(n log n), but in some cases O(n^2)
 public class QuicksortAlgorithm {
 	//use quicksort for all array
 	public static void quicksort(int[]array) {

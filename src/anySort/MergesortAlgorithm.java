@@ -1,5 +1,6 @@
 package anySort;
 
+//always O(n log n)
 public class MergesortAlgorithm {
 	public static void mergesort(int[]array) {
 		int lengthOfArray = array.length;

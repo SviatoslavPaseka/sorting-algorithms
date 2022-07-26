@@ -38,6 +38,13 @@ public class Entry {
 		HeapsortAlgorithm.heapsort(numbers);
 		System.out.println("/sorted/");
 		printSorted(numbers);
+		
+		numbers = fillTestArray();
+		System.out.println("Selection sort\n/not sorted/");
+		printSorted(numbers);
+		SelectionsortAlgorithm.selectionsort(numbers);
+		System.out.println("/sorted/");
+		printSorted(numbers);
 	}
 	//method to filling array random values
 	private static int[] fillTestArray() {
@@ -48,14 +55,14 @@ public class Entry {
 		}
 		return numbers;
 	}
-	//method to printing in console arrays
+	//method to printing arrays in console
 	private static void printSorted(int[]numbers) {
 		for (int i = 0; i < numbers.length; i++) {
 			System.out.print(numbers[i]+" ");
 		}
 		System.out.println("\n");
 	}
-	//method to printing in console lists
+	//method to printing lists in console
 	private static void printSorted(List<Integer> numbers) {
 		for (int i = 0; i < numbers.size(); i++) {
 			System.out.print(numbers.get(i)+" ");
