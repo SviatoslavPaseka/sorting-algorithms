@@ -3,9 +3,11 @@ package anySort;
 import java.util.List;
 import java.util.Random;
 
+/*testing class:)*/
 public class Entry {
 
 	public static void main(String[] args) {
+		//creating test array and fill it random value
 		int[] numbers = fillTestArray();
 		System.out.println(" QUICKSORT\n/not sorted/");
 		printSorted(numbers);
@@ -29,23 +31,31 @@ public class Entry {
 		ta.inOrderTraverseTree(ta.root);
 		System.out.println("/sorted/");
 		printSorted(ta.getSortedData());
+		
+		numbers = fillTestArray();
+		System.out.println("Heapsort\n/not sorted/");
+		printSorted(numbers);
+		HeapsortAlgorithm.heapsort(numbers);
+		System.out.println("/sorted/");
+		printSorted(numbers);
 	}
-
+	//method to filling array random values
 	private static int[] fillTestArray() {
 		Random random = new Random();
 		int[]numbers = new int[10];
-		
 		for (int i = 0; i < numbers.length; i++) {
 			numbers[i] = random.nextInt(100);
 		}
 		return numbers;
 	}
+	//method to printing in console arrays
 	private static void printSorted(int[]numbers) {
 		for (int i = 0; i < numbers.length; i++) {
 			System.out.print(numbers[i]+" ");
 		}
 		System.out.println("\n");
 	}
+	//method to printing in console lists
 	private static void printSorted(List<Integer> numbers) {
 		for (int i = 0; i < numbers.size(); i++) {
 			System.out.print(numbers.get(i)+" ");
