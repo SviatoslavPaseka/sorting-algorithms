@@ -7,8 +7,9 @@ import java.util.Random;
 public class Entry {
 
 	public static void main(String[] args) {
+		final int SIZE = 10;
 		//creating test array and fill it random value
-		int[] numbers = fillTestArray();
+		int[] numbers = fillTestArray(SIZE);
 		System.out.println(" QUICKSORT\n/not sorted/");
 		printSorted(numbers);
 		//QuicksortAlgorithm.quicksort(numbers, 0, numbers.length - 1);
@@ -16,14 +17,14 @@ public class Entry {
 		System.out.println("/sorted/");
 		printSorted(numbers);
 		
-		numbers = fillTestArray();
+		numbers = fillTestArray(SIZE);
 		System.out.println("Mergesort\n/not sorted/");
 		printSorted(numbers);
 		MergesortAlgorithm.mergesort(numbers);
 		System.out.println("/sorted/");
 		printSorted(numbers);
 		
-		numbers = fillTestArray();
+		numbers = fillTestArray(SIZE);
 		System.out.println("Treesort\n/not sorted/");
 		printSorted(numbers);
 		TreesortAlgorithm ta = new TreesortAlgorithm();
@@ -32,14 +33,14 @@ public class Entry {
 		System.out.println("/sorted/");
 		printSorted(ta.getSortedData());
 		
-		numbers = fillTestArray();
+		numbers = fillTestArray(SIZE);
 		System.out.println("Heapsort\n/not sorted/");
 		printSorted(numbers);
 		HeapsortAlgorithm.heapsort(numbers);
 		System.out.println("/sorted/");
 		printSorted(numbers);
 		
-		numbers = fillTestArray();
+		numbers = fillTestArray(SIZE);
 		System.out.println("Selection sort\n/not sorted/");
 		printSorted(numbers);
 		SelectionsortAlgorithm.selectionsort(numbers);
@@ -47,7 +48,7 @@ public class Entry {
 		printSorted(numbers);
 	}
 	//method to filling array random values
-	private static int[] fillTestArray() {
+	private static int[] fillTestArray(int size) {
 		Random random = new Random();
 		int[]numbers = new int[10];
 		for (int i = 0; i < numbers.length; i++) {
